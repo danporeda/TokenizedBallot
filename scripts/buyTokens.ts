@@ -32,6 +32,7 @@ const main = async () => {
 
   //buying tokens
   const buyTokensTx = await tokenSaleContract.buyTokens({ value: buyValue });
+  await buyTokensTx.wait();
   const tokenBalance = await tokenContract.balanceOf(signer.address);
   console.log(
     `Address ${signer.address} now has ${tokenBalance.div(
