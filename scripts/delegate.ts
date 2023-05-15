@@ -1,5 +1,3 @@
-//  TODO: delgate voting rights
-//  TODO: delgate voting rights
 import { ethers } from "hardhat";
 import { MyERC20Token__factory, TokenSale__factory } from "../typechain-types";
 import * as dotenv from "dotenv";
