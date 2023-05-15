@@ -5,7 +5,7 @@ dotenv.config();
 // run file from terminal with arguments of proposal names: yarn ts-node --files ./scripts/deployBallot.ts <proposal[0]> <proposal[1]> <proposal[2]> ...
 const TOKEN_ADDRESS = "0xd84744BC999c909828122779b4961FDc34f4E0d6";
 //replace with actual block number
-const BLOCK_NUMBER = 100912278;
+const BLOCK_NUMBER = 35613691;
 
 function convertStringArrayToBytes32(array: string[]) {
   const bytes32Array = [];
@@ -46,3 +46,8 @@ const main = async () => {
     at block ${deployTx.blockNumber}`);
   console.log(`Transaction hash: ${deployTx.transactionHash}`);
 };
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
